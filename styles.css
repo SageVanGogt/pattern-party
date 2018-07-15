@@ -24,14 +24,17 @@ header h2 {
 
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: black;
   cursor: pointer;
   padding: 18px;
-  width: 100px;
+  width: 250px;
   text-align: left;
-  border: none;
+  border: .5px solid white;
+  border-bottom: 1px solid grey;
   outline: none;
   transition: 0.4s;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .active, .accordion:hover {
@@ -39,11 +42,96 @@ header h2 {
 }
 
 .panel {
-  padding: 0 18px;
-  width: 400px;
-  height: 380px;
-  background-color: blue;
+  width: 950px;
+  height: 450px;
   display: none;
-  overflow: hidden;
+  border: 1px solid grey;
+  border-top: none;
 }
 
+.accordion-display {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+main {
+  width: 95%;
+  margin: auto;
+}
+
+h3 {
+  display: block;
+  width: 90%;
+}
+
+.panel.selected {
+  display: flex;
+  padding: 25px;
+}
+
+.accordion.selected {
+  background-color: white;
+  border: 1px solid grey;
+  border-bottom: none;
+}
+
+.placeholder-img {
+  display: block;
+  width: 40%;
+  height: 100%;
+}
+
+.panel p {
+  display: block;
+  
+}
+
+.panel h2 {
+  border-bottom: 1px solid black;
+}
+
+.panel-text {
+  margin: auto;
+  margin-left: 30px;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: left;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid black;
+  top: 0;
+  width: 75vw;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.code-view-btn {
+  width: 300px;
+  height: 70px;
+  margin: 80px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: purple;
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+}
