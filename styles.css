@@ -24,12 +24,13 @@ header h2 {
 
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 250px;
   text-align: left;
-  border: none;
+  border: .5px solid white;
+  border-bottom: 1px solid grey;
   outline: none;
   transition: 0.4s;
   text-align: center;
@@ -41,12 +42,11 @@ header h2 {
 }
 
 .panel {
-  /* padding: 0 18px; */
-  width: 1000px;
-  height: 500px;
-  background-color: blue;
-  overflow: hidden;
-  display: none
+  width: 950px;
+  height: 450px;
+  display: none;
+  border: 1px solid grey;
+  border-top: none;
 }
 
 .accordion-display {
@@ -75,10 +75,22 @@ h3 {
 } */
 
 .panel.selected {
-  color: red;
-  display: block;
+  display: flex;
+  padding: 25px;
 }
 
 .accordion.selected {
-  background-color: grey;
+  background-color: white;
+  border: 1px solid grey;
+  border-bottom: none;
+}
+
+.placeholder-img {
+  display: block;
+  width: 40%;
+  height: 100%;
+}
+
+.panel p {
+  display: block;
 }
