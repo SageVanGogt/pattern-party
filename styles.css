@@ -1,0 +1,49 @@
+.pattrn-header {
+  height: 50px;
+  width: 100vw;
+  background-color: purple;
+}
+
+.pattrn-text {
+  color: white;
+}
+
+.party-text {
+  color: blue
+}
+
+.site-name {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+header h2 {
+  display: inline-block;
+  float: right;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100px;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  width: 400px;
+  height: 380px;
+  background-color: blue;
+  display: none;
+  overflow: hidden;
+}
+
