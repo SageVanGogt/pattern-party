@@ -68,12 +68,6 @@ h3 {
   width: 90%;
 }
 
-/* .display-case {
-  background-color: black;
-  width: 1000px;
-  height: 500px;
-} */
-
 .panel.selected {
   display: flex;
   padding: 25px;
@@ -93,4 +87,38 @@ h3 {
 
 .panel p {
   display: block;
+  
+}
+
+.panel h2 {
+  border-bottom: 1px solid black;
+}
+
+.panel-text {
+  margin: auto;
+  margin-left: 30px;
+}
+
+.fancy {
+  line-height: 0.5;
+  text-align: left;
+}
+
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid black;
+  top: 0;
+  width: 75vw;
+}
+
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
 }
