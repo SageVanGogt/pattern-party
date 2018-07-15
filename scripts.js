@@ -6,16 +6,11 @@ tabs.forEach(tab => {
 })
 
 function toggleSelected() {
-  console.log(tabs)
   let tabNum = this.value.split('-')[1];
   let targetPanelClass = `panel-${tabNum}`;
-  let currSelectedTab = this.className.split('selected')[0]
-  console.log(currSelectedTab)
-  console.log(targetPanelClass)
+  let currSelectedTab = `.${this.value}`
   tabs.forEach(tab => $(tab).removeClass('selected'));
   panels.forEach(panel => $(panel).removeClass('selected'));
-  $(`.${currSelectedTab}`).addClass('selected');
+  $(currSelectedTab).addClass('selected');
   $(`.${targetPanelClass}`).addClass('selected');
-  console.log(tabs)
-  console.log(panels)
 }
