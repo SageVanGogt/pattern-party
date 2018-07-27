@@ -14,3 +14,18 @@ function toggleSelected() {
   $(currSelectedTab).addClass('selected');
   $(`.${targetPanelClass}`).addClass('selected');
 }
+
+const accTabs = document.getElementsByClassName("accordion-mobile");
+
+for (let i = 0; i < accTabs.length; i++) {
+    accTabs[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
