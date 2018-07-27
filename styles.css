@@ -1,25 +1,43 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.accordion-display-mobile {
+  display: none;
+}
+
 .pattrn-header {
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
   width: 100vw;
-  background-color: purple;
+  background-color: #2f2235;
 }
 
 .pattrn-text {
-  color: white;
+  color: #f2f2f2;
 }
 
 .party-text {
-  color: blue
+  color: #34d1d1;
 }
 
 .site-name {
   display: inline-block;
-  margin-left: 40px;
+  margin: 0;
+  margin-left: 6.6vw;
+  font-weight: 300;
+  font-size: 1.7rem;
 }
 
 header h2 {
-  display: inline-block;
-  float: right;
+  margin-right: 40px;
+  color: #f2f2f2;
+  font-weight: 300;
 }
 
 .accordion {
@@ -55,7 +73,7 @@ header h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 main {
@@ -87,7 +105,6 @@ h3 {
 
 .panel p {
   display: block;
-  
 }
 
 .panel h2 {
@@ -106,7 +123,7 @@ h3 {
 
 .fancy span {
   display: inline-block;
-  position: relative;  
+  position: relative;
 }
 
 .fancy span:after {
@@ -123,15 +140,201 @@ h3 {
   margin-left: 15px;
 }
 
+.title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .code-view-btn {
   width: 300px;
   height: 70px;
-  margin: 80px 200px;
+  margin: 80px 200px 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: purple;
+  background-color: #3f3244;
   font-size: 1.3rem;
-  color: black;
+  color: #f2f2f2;
   text-decoration: none;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-rows: 290px 290px 290px;
+  grid-template-columns: 27vw 27vw 27vw;
+  grid-row-gap: 2.4ch;
+  grid-column-gap: 2.4ch;
+  grid-template-areas: "a a b" "c d e" "f g g";
+}
+
+.flex-card {
+  border: .5px solid black;
+}
+
+.card-img {
+  width: 100%;
+  height: calc(100% - 80px);
+  background-image: url('./assets/placeholder.png');
+}
+
+.flex-card h4 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  height: 80px;
+  font-size: 1.4rem;
+}
+
+.flex-1 {
+  grid-area: a;
+}
+
+.flex-2 {
+  grid-area: b;
+}
+
+.flex-3 {
+  grid-area: c;
+}
+
+.flex-4 {
+  grid-area: d;
+}
+
+.flex-5 {
+  grid-area: e;
+}
+
+.flex-6 {
+  grid-area: f;
+}
+
+.flex-7 {
+  grid-area: g;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  height: 120px;
+  background-color: #d1d2d3;
+  margin-top: 50px;
+}
+
+.nav-link {
+  margin-right: 5vw;
+  text-decoration: none;
+  color: #666666;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+.site-img {
+  margin: 0 5vw 0 2vw;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.menu-btn {
+  display: none;
+}
+
+form input {
+  height: 50px;
+  width: 15vw;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 440px) {
+  body {
+    width: 100vw;
+  }
+
+  .accordion-display {
+    display: none;
+  }
+  .accordion-display-mobile {
+    display: block;
+  }
+  .grid-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-card {
+    height: 300px;
+    width: 90vw;
+    margin-top: 20px;
+  }
+  .code-view-btn {
+    width: 90vw;
+    margin: 30px 0;
+  }
+  .fancy {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .mobile-bottom {
+    width: 100px;
+    margin: 0 auto 20px;; 
+    border-bottom: 1px solid black;
+  }
+
+  .title span:after {
+    display: none;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-mobile {
+    width: 90vw;
+  }
+
+  form input {
+    display: none;
+  }
+  .site-img {
+    display: block;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .accordion-mobile {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 90vw;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .active, .accordion-mobile:hover {
+    background-color: #ccc;
+  }
+
+  .panel-mobile {
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    width: 90vw;
+  }
+
+  .panel-text-mobile {
+    width: 100%;
+  }
+
+  .placeholder-img-mobile {
+    width: 100%;
+    margin: 0;
+  }
 }
